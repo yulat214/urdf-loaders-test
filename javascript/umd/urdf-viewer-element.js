@@ -1,6 +1,6 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('three'), require('three/examples/jsm/controls/OrbitControls.js'), require('./URDFLoader.js')) :
-    typeof define === 'function' && define.amd ? define(['three', 'three/examples/jsm/controls/OrbitControls.js', './URDFLoader'], factory) :
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('three'), require('three/addons/controls/OrbitControls.js'), require('./URDFLoader.js')) :
+    typeof define === 'function' && define.amd ? define(['three', 'three/addons/controls/OrbitControls.js', './URDFLoader'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.URDFViewer = factory(global.THREE, global.THREE, global.URDFLoader));
 })(this, (function (THREE, OrbitControls_js, URDFLoader) { 'use strict';
 

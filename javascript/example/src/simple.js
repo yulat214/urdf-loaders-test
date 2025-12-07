@@ -14,7 +14,7 @@ import {
     LoadingManager,
     MathUtils,
 } from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import URDFLoader from '../../src/URDFLoader.js';
 
 let scene, camera, renderer, robot, controls;

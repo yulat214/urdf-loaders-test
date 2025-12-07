@@ -1,10 +1,10 @@
 /* globals */
 import * as THREE from 'three';
 import { registerDragEvents } from './dragAndDrop.js';
-import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { ColladaLoader } from 'three/examples/jsm/loaders/ColladaLoader.js';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
+import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { ColladaLoader } from 'three/addons/loaders/ColladaLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import URDFManipulator from '../../src/urdf-manipulator-element.js';
 
 customElements.define('urdf-viewer', URDFManipulator);
@@ -348,7 +348,7 @@ const updateList = () => {
             const urdf = e.target.getAttribute('urdf');
             const color = e.target.getAttribute('color');
 
-            viewer.up = '-Z';
+            viewer.up = '+Z';
             document.getElementById('up-select').value = viewer.up;
             viewer.urdf = urdf;
             animToggle.classList.add('checked');
