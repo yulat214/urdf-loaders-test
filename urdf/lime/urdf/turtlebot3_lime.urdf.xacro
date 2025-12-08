@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="turtlebot3_lime_visual" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:arg name="prefix" default="" />
+
+  <xacro:include filename="turtlebot3_bigwheel_orin.urdf.xacro" />
+  
+  <xacro:include filename="open_manipulator_sara.urdf.xacro" />
+
+
+  <xacro:turtlebot3_bigwheel_orin prefix="$(arg prefix)" />
+
+  <joint name="$(arg prefix)arm_mount_joint" type="fixed">
+    <parent link="$(arg prefix)base_link"/>
+    <child link="$(arg prefix)link1"/>
+    <origin xyz="-0.036 0.0 0.07" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:open_manipulator_sara prefix="$(arg prefix)" />
+
+</robot>
